@@ -1,0 +1,19 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := libtee_client.so
+LOCAL_EXPORT_C_INCLUDE_DIRS := \
+    $(LOCAL_PATH)/include \
+    hardware/marvell/pxa1908/original-kernel-headers
+
+LOCAL_MODULE := libtee_client
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE_TAG := optional
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_PRELINK_MODULE := false
+
+#LOCAL_ADDITIONAL_DEPENDENCIES := \
+    $(TARGET_OUT_SHARED_LIBRARIES)/ \
+
+include $(BUILD_PREBUILT)
