@@ -2,7 +2,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := libGAL.so
-LOCAL_EXPORT_C_INCLUDE_DIRS := hardware/marvell/pxa1908/original-kernel-headers/drivers/marvell/graphics/galcore_src/hal/inc
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
 
 LOCAL_MODULE := libGAL
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
